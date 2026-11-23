@@ -17,7 +17,7 @@ jobs:
         with:
           node-version: 20
       - name: Install existing WakaTime client
-        run: npm ci --ignore-scripts
+        run: npm ci --ignore-scripts --legacy-peer-deps
       - name: Verify OAuth token with the same client used by waka-box
         env:
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
